@@ -1,0 +1,40 @@
+{% extends "layout.html"%}
+{% set pageId = "page-listaPontos" %}
+{% block title %}
+    <title>Pontos encontrados</title>
+{% endblock title %}
+{% block styles %}
+    <link rel="stylesheet" href="/styles/listaPontos.css">
+{% endblock styles %}
+{% block content %}
+    <header>
+        <img src="/assets/logo.svg" alt="Logo do site">
+        <a href="/">
+            <span></span>
+            Voltar para home
+        </a>
+    </header>
+    <main>
+        {% if total > 0 %}
+            <h4>
+            <strong>{{total}} Pontos</strong>
+            encontrados
+        </h4>
+        <div class="cards">
+
+           {% for local in locais %}
+             <div class="card">
+                <img src="/assets/Recycle1.jpg" alt="Coletoria">
+                <h1>{{local.name}}</h1>
+                <h3>{{local.items}}</h3>
+                <p>{{local.city}}, {{local.state}} <br/> {{local.address}}, {{local.address2}} </p>
+            </div>
+           {% endfor %}
+
+        </div>
+        {%else%}
+        <h4>Não há pontos para essa região</h4>
+        {% endif %}
+        
+    </main>
+{% endblock content %}

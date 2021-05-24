@@ -1,0 +1,146 @@
+#page-ponto{
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+}
+
+#page-ponto header{
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#page-ponto header a{
+    color: var(--title-color);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+#page-ponto header a span{
+    margin-right: 10px;
+    background-image: url('../assets/arrow-left.svg');
+   
+    width: 20px;
+    height: 24px;
+}
+
+form{
+    background-color: white;
+    margin: 80px auto;
+    padding: 60px;
+    border-radius: 10px;
+    max-width: 730px;
+}
+
+form h1{
+    font-size: 36px;
+}
+
+form fieldset{
+    margin-top: 64px;
+
+    border: 0;
+}
+
+form legend{
+    margin-bottom: 40px;
+}
+
+form legend h2{
+    font-size: 24px;
+}
+
+form .field{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+form .field-group{
+    display: flex;
+}
+
+form input,
+form select {
+    background-color: #f0f0f5;
+
+    border: 0;
+    padding: 16px 24px;
+    font-size: 14px;
+
+    border-radius: 8px;
+}
+
+form label {
+    font-size: 12px bold;
+    margin-bottom: 8px;
+}
+
+form .field-group .field + .field{
+    margin-left: 24px;
+}
+
+form button {
+    margin-top: 40px;
+    width: 100%;
+    height: 50px;
+
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    color:var(--title-color);
+    font-weight:bold;
+    font-size: 16px;
+
+    border: 0;
+}
+
+form button:hover{
+    background-color: #2fb86e;
+}
+
+.items-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+}
+
+.items-grid li{
+    background-color: #e3eeec;
+    list-style: none;
+    border: 2px solid #e3eeec;
+    border-radius: 8px;
+
+    height: 160px;
+    padding: 32px 24px 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+
+    cursor: pointer;
+}
+
+.items-grid li span{
+    margin-top: 10px;
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+
+    color: var(--title-color);
+}
+
+.items-grid li.selected{
+    background: #e1faec;
+    border: 2px solid #34cb79;
+}
+
+.items-grid li img, .items-grid li span {
+    pointer-events: none;
+}
